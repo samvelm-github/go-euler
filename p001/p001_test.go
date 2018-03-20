@@ -9,7 +9,6 @@ func TestRun(t *testing.T) {
 		{1000, 233168},
 		{100, 2318},
 		{50, 543},
-		{50, 5439},
 	}
 	for _, c := range cases {
 		got := Run(c.in)
