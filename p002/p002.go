@@ -6,7 +6,7 @@ import "fmt"
 func main() {
 	fmt.Printf("\n\n fibonacci sequence for first %d numbers: %d", 10, CalcFibo(10))
 
-	fmt.Printf("\n\n fibonacci sequence for first %d numbers: %d", 10, CalcFiboRecoursive(10))
+	fmt.Printf("\n\n fibonacci sequence for first %d numbers: %d", 50, CalcFiboRecoursive(50))
 
 	limit := 4000000
 	fmt.Printf("\n\n Problem two from project euler for %d limit: %d", limit, ProblemTwo(limit))
@@ -21,7 +21,7 @@ func CalcFibo(n int) int {
 
 	n1 := 1
 	n2 := 2
-	fibo := 3
+	var fibo = 0
 	for index := 2; index < n; index++ {
 		fibo = n1 + n2
 		n1 = n2
@@ -72,5 +72,4 @@ func ProblemTwo(limit int) int {
 	}
 
 	return customFibo
-
 }
