@@ -39,5 +39,4 @@ func TestProblemTwo(t *testing.T) {
 	if actualValue != expectedValue {
 		t.Errorf("ProblemTwo(%d) == %d, expected %d", limit, actualValue, expectedValue)
 	}
-
 }

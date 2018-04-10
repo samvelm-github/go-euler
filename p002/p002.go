@@ -12,7 +12,7 @@ func main() {
 	fmt.Printf("\n\n Problem two from project euler for %d limit: %d", limit, ProblemTwo(limit))
 }
 
-// CalcFibo calculates Fibonacci sequence for the firs
+// CalcFibo - calculates Fibonacci sequence for the firs
 // n numbers given by its input parameter
 func CalcFibo(n int) int {
 	if n == 1 || n == 2 {
