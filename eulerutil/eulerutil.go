@@ -10,14 +10,16 @@ func Reverse(s string) string {
 	for i, j := 0, len(r)-1; i < len(r)/2; i, j = i+1, j-1 {
 		r[i], r[j] = r[j], r[i]
 	}
-	return string(r)
+
+	ret := string(r)
+	fmt.Printf("Input: %s \t Output: %s\n", s, ret)
+
+	return ret
 }
 
 // PrimeFactorization - takes a number on the input and returns an array
 // of prime factorsint
 func PrimeFactorization(aNumber int) []int {
-
-	fmt.Printf(">> aNumber: %d\n", aNumber)
 
 	n := aNumber
 	factors := make([]int, 0)
@@ -34,4 +36,29 @@ func PrimeFactorization(aNumber int) []int {
 	}
 
 	return factors
+}
+
+// MaxInArray - returns the largest number in array of integer values
+func MaxInArray(arr []int) int {
+	max := arr[0]
+
+	for _, value := range arr {
+		if value > max {
+			max = value
+		}
+	}
+
+	return max
+}
+
+// MinInArray - returns the smallest number in array of integer values
+func MinInArray(arr []int) int {
+	min := arr[0]
+
+	for _, value := range arr {
+		if value < min {
+			min = value
+		}
+	}
+	return min
 }
