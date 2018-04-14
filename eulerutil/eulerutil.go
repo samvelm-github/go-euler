@@ -4,6 +4,22 @@ import (
 	"fmt"
 )
 
+// IsPalindrome - returns true if the string is palindrome and false otherwise
+func IsPalindrome(s string) bool {
+	ret := true
+	r := []rune(s)
+	for i, j := 0, len(r)-1; i < len(r)/2; i, j = i+1, j-1 {
+		if r[i] != r[j] {
+			ret = false
+			break
+		}
+	}
+
+	fmt.Printf("Input: %s \t IsPalindrome: %t\n", s, ret)
+
+	return ret
+}
+
 // Reverse - string reverse
 func Reverse(s string) string {
 	r := []rune(s)

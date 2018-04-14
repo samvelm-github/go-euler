@@ -5,6 +5,29 @@ import (
 	"testing"
 )
 
+func TestIsPalindrome(t *testing.T) {
+	s := "12321"
+	isPalindrome := IsPalindrome(s)
+
+	if !isPalindrome {
+		t.Errorf("The string %s is palindrome - %t\n", s, isPalindrome)
+	}
+
+	s = "123321"
+	isPalindrome = IsPalindrome(s)
+
+	if !isPalindrome {
+		t.Errorf("The string %s is palindrome - %t\n", s, isPalindrome)
+	}
+
+	s = "123219"
+	isPalindrome = IsPalindrome(s)
+
+	if isPalindrome {
+		t.Errorf("The string %s is palindrome - %t\n", s, isPalindrome)
+	}
+}
+
 func TestPrimeFactorization(t *testing.T) {
 	aNumber := 600851475143
 	expected := [2]int{11, 11}
