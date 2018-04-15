@@ -4,6 +4,15 @@ import (
 	"fmt"
 )
 
+// GCD - function returning greatest common divisor using Euclid's algorithm
+func GCD(numberOne int, numberTwo int) int {
+	//base case
+	if numberTwo == 0 {
+		return numberOne
+	}
+	return GCD(numberTwo, numberOne%numberTwo)
+}
+
 // IsPalindrome - returns true if the string is palindrome and false otherwise
 func IsPalindrome(s string) bool {
 	ret := true

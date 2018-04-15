@@ -28,6 +28,18 @@ func TestIsPalindrome(t *testing.T) {
 	}
 }
 
+func TestGCD(t *testing.T) {
+	numberOne := 54
+	numberTwo := 24
+	expected := 6
+	gcd := GCD(numberOne, numberTwo)
+
+	fmt.Printf("%v\n", gcd)
+	if gcd != expected {
+		t.Errorf("GCD(%d, %d) == %d, expecting %d", numberOne, numberTwo, gcd, expected)
+	}
+}
+
 func TestPrimeFactorization(t *testing.T) {
 	aNumber := 600851475143
 	expected := [2]int{11, 11}
@@ -56,7 +68,7 @@ func TestReversePos(t *testing.T) {
 	hello := "Hello World"
 	expected := "dlroW olleH"
 	reverse := Reverse(hello)
-	if reverse != reverse {
+	if reverse != expected {
 		t.Errorf("Reverse(%s) == %s, want %s", hello, reverse, expected)
 	}
 }
