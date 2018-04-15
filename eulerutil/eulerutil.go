@@ -24,8 +24,6 @@ func IsPalindrome(s string) bool {
 		}
 	}
 
-	fmt.Printf("Input: %s \t IsPalindrome: %t\n", s, ret)
-
 	return ret
 }
 

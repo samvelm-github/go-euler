@@ -41,7 +41,7 @@ func TestGCD(t *testing.T) {
 }
 
 func TestPrimeFactorization(t *testing.T) {
-	aNumber := 600851475143
+	aNumber := 121
 	expected := [2]int{11, 11}
 	factors := PrimeFactorization(aNumber)
 
