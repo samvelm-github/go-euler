@@ -2,7 +2,28 @@ package eulerutil
 
 import (
 	"fmt"
+	"math"
 )
+
+// IsPrime - returns true if the passed parameter is a prime number
+// and false otherwise
+func IsPrime(aNumber int) bool {
+	if aNumber > 2 && aNumber%2 == 0 {
+		return false
+	}
+
+	ret := true
+	limit := int(math.Sqrt(float64(aNumber))) + 1
+
+	for i := 3; i <= limit; i++ {
+		if aNumber%i == 0 {
+			ret = false
+			break
+		}
+	}
+
+	return ret
+}
 
 // GCD - function returning greatest common divisor using Euclid's algorithm
 func GCD(numberOne int, numberTwo int) int {

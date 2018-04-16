@@ -5,6 +5,24 @@ import (
 	"testing"
 )
 
+func TestIsPrime(t *testing.T) {
+	cases := []struct {
+		aNumber int
+		isPrime bool
+	}{
+		{5, true},
+		{11, true},
+		{66, false},
+	}
+	for _, c := range cases {
+		isPrime := IsPrime(c.aNumber)
+		if isPrime != c.isPrime {
+			t.Errorf("IsPrime(%d) == %t, want %t", c.aNumber, isPrime, c.isPrime)
+		}
+	}
+
+}
+
 func TestIsPalindrome(t *testing.T) {
 	s := "12321"
 	isPalindrome := IsPalindrome(s)
